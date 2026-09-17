@@ -61,6 +61,15 @@ Variables you leave unset are passed through empty, which the image treats as un
 
 The compose file can be deployed to AWS ECS by following this [tutorial](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-cli-tutorial-ec2.html) (we recommend EC2 deployment). Change the port mapping to 80 and 443 in `docker-compose.yml` to support the standard HTTP and HTTPS ports, allow access to these ports in the security group inbound rules, and set `DRAWIO_SERVER_URL` to your public deployment URL.
 
+## Easypanel
+
+If you'd rather not manage the container yourself, [Easypanel](https://easypanel.io) is a self-hosted deployment platform with a one-click draw.io template:
+
+[![Deploy on Easypanel][easypanel-btn]][easypanel-deploy]
+
+[easypanel-btn]: https://easypanel.io/img/deploy-on-easypanel-40.svg
+[easypanel-deploy]: https://easypanel.io/templates/drawio
+
 ## Running as a non-root user
 
 The image already runs as a dedicated non-root user by default — `tomcat` (UID `1001`, GID `999`) — so nothing needs to be configured just to avoid root.
